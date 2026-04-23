@@ -16,6 +16,8 @@ npm run dev
 
 Abra [http://localhost:3000](http://localhost:3000) para ver o resultado.
 
+> **Showcase:** acesse [http://localhost:3000/showcase](http://localhost:3000/showcase) para explorar todos os componentes e tokens do Design System em uma página interativa.
+
 ---
 
 ## O que já vem configurado
