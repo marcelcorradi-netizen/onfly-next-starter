@@ -1,87 +1,74 @@
 # onfly-next-starter
 
-Template base para criar telas e protótipos com o **Onfly Design System** — shadcn/ui já tematizado com os tokens Onfly, pronto para usar.
+Template oficial da Onfly para criar telas e protótipos. Vem com **Next.js 15 + shadcn/ui já tematizado com os tokens do Onfly Design System** — você começa com tudo configurado e vai direto pro que importa.
 
-## Stack
+---
 
-- **Next.js 15** (App Router)
-- **React 19**
-- **TypeScript**
-- **Tailwind CSS v4**
-- **shadcn/ui** — 70+ componentes instalados
-- **Onfly Design System** — tokens completos de cor, tipografia, espaçamento, sombras e grid
-
-## Início rápido
+## Criar um projeto
 
 ```bash
-# 1. Clone ou use como template no GitHub
-git clone https://github.com/onfly/onfly-next-starter.git meu-projeto
+npx create-next-app@latest meu-projeto --example https://github.com/onfly/onfly-next-starter
 cd meu-projeto
-
-# 2. Instale as dependências
-npm install
-
-# 3. Rode o servidor de desenvolvimento
 npm run dev
 ```
+
+> Substitua `meu-projeto` pelo nome do seu projeto. O comando baixa o template, cria a pasta e instala as dependências automaticamente.
 
 Abra [http://localhost:3000](http://localhost:3000) para ver o resultado.
 
 ---
 
-## Design Tokens
+## O que já vem configurado
 
-Os tokens estão em `src/styles/tokens/` como CSS Custom Properties e mapeados para o tema do shadcn em `src/app/globals.css`.
+### Design System completo
+Os tokens do Onfly Design System estão em `src/styles/tokens/` como CSS Custom Properties e integrados ao shadcn/ui em `src/app/globals.css`. Você usa direto, sem configurar nada.
 
-### Usar tokens como classes Tailwind
-
-```tsx
-<div className="bg-primary text-primary-foreground rounded-lg p-4" />
-```
-
-### Usar tokens como CSS variables
+**Como usar os tokens:**
 
 ```tsx
+// Via classes Tailwind (preferível para casos simples)
+<div className="bg-primary text-primary-foreground rounded-lg" />
+
+// Via CSS variables (para controle fino)
 <div style={{ color: "var(--content-primary)", background: "var(--background-brand-subtle-1)" }} />
 ```
 
-### Atualizar tokens do Figma
-
-1. Exporte os tokens do Figma (plugin Tokens Studio ou Figma Variables) como JSON
-2. Cole os arquivos em `tokens-input/`
-3. No Claude Code, invoque a skill `design-system-specialist`
-
----
-
-## Componentes shadcn
-
-Todos os componentes estão em `src/components/ui/` e já usam os tokens Onfly.
+### 44 componentes shadcn/ui instalados e tematizados
+Todos em `src/components/ui/` e já com a cara do Onfly DS. Importe e use:
 
 ```tsx
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
 ```
 
-Para adicionar novos componentes:
+Para adicionar mais componentes do catálogo shadcn:
 
 ```bash
-npx shadcn@latest add <component-name>
+npx shadcn@latest add <nome-do-componente>
 ```
 
----
-
-## Skills Claude Code
-
-Este template inclui skills pré-configuradas para o Claude Code (`.claude/skills/`):
+### Skills do Claude Code incluídas
+O template já tem 5 skills configuradas em `.claude/skills/` para usar com o [Claude Code](https://claude.ai/code):
 
 | Skill | O que faz |
 |---|---|
-| `design-system-specialist` | Converte tokens Figma → CSS, sincroniza o tema shadcn |
-| `frontend-design` | Cria componentes e páginas com alta qualidade visual |
-| `landing-page` | Cria landing pages e páginas de marketing |
-| `prd` | Gera Product Requirements Documents |
-| `skill-creator` | Cria e melhora novas skills |
+| `design-system-specialist` | Converte tokens do Figma → CSS, sincroniza o tema shadcn |
+| `frontend-design` | Cria componentes e páginas com alta qualidade visual usando os tokens Onfly |
+| `landing-page` | Cria landing pages e páginas de marketing com o Onfly DS |
+| `prd` | Gera Product Requirements Documents completos |
+| `skill-creator` | Cria e melhora novas skills para o seu projeto |
+
+---
+
+## Atualizar os tokens do Figma
+
+Quando os tokens mudarem no Figma, você sincroniza assim:
+
+1. Exporte os tokens do Figma como JSON (plugin **Tokens Studio** ou **Figma Variables**)
+2. Cole os arquivos em `tokens-input/`
+3. No Claude Code, escreva: *"sincroniza os tokens"* — a skill `design-system-specialist` cuida do resto
 
 ---
 
@@ -90,21 +77,21 @@ Este template inclui skills pré-configuradas para o Claude Code (`.claude/skill
 ```
 onfly-next-starter/
 ├── .claude/
-│   ├── CLAUDE.md               ← instruções para o Claude Code
+│   ├── CLAUDE.md               ← contexto do projeto para o Claude Code
 │   └── skills/                 ← skills pré-configuradas
 ├── src/
 │   ├── app/
-│   │   ├── globals.css         ← tokens + tema shadcn
-│   │   ├── layout.tsx          ← layout base
+│   │   ├── globals.css         ← tokens do DS integrados ao shadcn
+│   │   ├── layout.tsx          ← layout base da aplicação
 │   │   └── page.tsx            ← página inicial de exemplo
 │   ├── components/
-│   │   └── ui/                 ← 70+ componentes shadcn tematizados
+│   │   └── ui/                 ← componentes shadcn tematizados
 │   ├── lib/
-│   │   └── utils.ts            ← helper cn()
+│   │   └── utils.ts            ← helper cn() para classes condicionais
 │   └── styles/
-│       └── tokens/             ← sistema de tokens CSS completo
+│       └── tokens/             ← sistema de tokens CSS (gerado do Figma)
 ├── tokens-input/               ← JSONs exportados do Figma
-├── components.json             ← configuração shadcn
+├── components.json             ← configuração do shadcn
 ├── next.config.ts
 ├── tsconfig.json
 └── package.json
@@ -112,6 +99,11 @@ onfly-next-starter/
 
 ---
 
-## GitHub Template
+## Stack
 
-Para usar este repositório como template ao criar novos projetos no GitHub, clique em **"Use this template"** no topo da página do repositório.
+- [Next.js 15](https://nextjs.org) · App Router
+- [React 19](https://react.dev)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [shadcn/ui](https://ui.shadcn.com)
+- [Onfly Design System](https://design.onfly.com.br) — tokens de cor, tipografia, espaçamento, sombras e grid
