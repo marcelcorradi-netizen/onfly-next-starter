@@ -1,6 +1,8 @@
 # onfly-next-starter
 
-Template oficial da Onfly para criar telas e protótipos. Vem com **Next.js 15 + shadcn/ui já tematizado com os tokens do Onfly Design System** — você começa com tudo configurado e vai direto pro que importa.
+Template para criar **protótipos e validar ideias** com a cara da Onfly — rápido de botar de pé, sem configuração.
+
+> **Não é o Design System oficial da Onfly.** O stack de produção da Onfly usa Vue + Quasar. Este template é uma camada independente: os tokens do nosso Design System (cores, tipografia, espaçamento) foram aplicados sobre o shadcn/ui, que já vem com dezenas de componentes prontos. O resultado são protótipos visualmente alinhados com a Onfly sem precisar de todo o setup do stack de produção.
 
 ---
 
