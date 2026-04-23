@@ -1,0 +1,198 @@
+{
+  "spacing": {
+    "stack": {
+      "none": {
+        "$type": "dimension",
+        "$value": "{scale.0}"
+      },
+      "2xs": {
+        "$type": "dimension",
+        "$value": "{scale.4}"
+      },
+      "xs": {
+        "$type": "dimension",
+        "$value": "{scale.8}"
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": "{scale.12}"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "{scale.16}"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "{scale.24}"
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "{scale.32}"
+      }
+    },
+    "inline": {
+      "none": {
+        "$type": "dimension",
+        "$value": "{scale.0}"
+      },
+      "2xs": {
+        "$type": "dimension",
+        "$value": "{scale.4}"
+      },
+      "xs": {
+        "$type": "dimension",
+        "$value": "{scale.8}"
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": "{scale.12}"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "{scale.16}"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "{scale.24}"
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "{scale.32}"
+      }
+    },
+    "inset": {
+      "none": {
+        "$type": "dimension",
+        "$value": "{scale.0}"
+      },
+      "3xs": {
+        "$type": "dimension",
+        "$value": "{scale.2}"
+      },
+      "2xs": {
+        "$type": "dimension",
+        "$value": "{scale.4}"
+      },
+      "xs": {
+        "$type": "dimension",
+        "$value": "{scale.8}"
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": "{scale.12}"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "{scale.16}"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "{scale.24}"
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "{scale.32}"
+      },
+      "2xl": {
+        "$type": "dimension",
+        "$value": "{scale.40}"
+      },
+      "3xl": {
+        "$type": "dimension",
+        "$value": "{scale.48}"
+      },
+      "4xl": {
+        "$type": "dimension",
+        "$value": "{scale.56}"
+      }
+    },
+    "context": {
+      "screen": {
+        "horizontal-padding": {
+          "$type": "dimension",
+          "$value": "{scale.32}"
+        }
+      },
+      "section": {
+        "vertical-padding": {
+          "$type": "dimension",
+          "$value": "{scale.40}"
+        }
+      }
+    }
+  },
+  "border": {
+    "width": {
+      "sm": {
+        "$type": "dimension",
+        "$value": "{scale.1}"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "{scale.2}"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "{scale.4}"
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "{scale.6}"
+      },
+      "2xl": {
+        "$type": "dimension",
+        "$value": "{scale.8}"
+      }
+    },
+    "radius": {
+      "none": {
+        "$type": "dimension",
+        "$value": "{scale.0}"
+      },
+      "xs": {
+        "$type": "dimension",
+        "$value": "{scale.4}"
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": "{scale.8}"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "{scale.12}"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "{scale.16}"
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "{scale.24}"
+      },
+      "full": {
+        "$type": "dimension",
+        "$value": "{scale.999}"
+      }
+    }
+  },
+  "size": {
+    "screen": {
+      "max-width": {
+        "$type": "dimension",
+        "$value": "1920px"
+      },
+      "min-width": {
+        "$type": "dimension",
+        "$value": "1280px"
+      },
+      "showDesktop": {
+        "$type": "boolean",
+        "$value": true
+      },
+      "showMobile": {
+        "$type": "boolean",
+        "$value": false
+      }
+    }
+  }
+}

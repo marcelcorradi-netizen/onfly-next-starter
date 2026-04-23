@@ -1,0 +1,134 @@
+/* ── 1. Token files ── */
+@import '../styles/tokens/index.css';
+
+/* ── 2. Tailwind & shadcn base ── */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ── Light mode only — dark: variants never fire ── */
+@variant dark (&:is(.dark *));
+
+/* ── 3. Register shadcn vars as Tailwind color utilities via @theme inline ── */
+@theme inline {
+  --color-background:             var(--background);
+  --color-foreground:             var(--foreground);
+  --color-card:                   var(--card);
+  --color-card-foreground:        var(--card-foreground);
+  --color-popover:                var(--popover);
+  --color-popover-foreground:     var(--popover-foreground);
+  --color-primary:                var(--primary);
+  --color-primary-foreground:     var(--primary-foreground);
+  --color-secondary:              var(--secondary);
+  --color-secondary-foreground:   var(--secondary-foreground);
+  --color-muted:                  var(--muted);
+  --color-muted-foreground:       var(--muted-foreground);
+  --color-accent:                 var(--accent);
+  --color-accent-foreground:      var(--accent-foreground);
+  --color-destructive:            var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border:                 var(--border);
+  --color-input:                  var(--input);
+  --color-ring:                   var(--ring);
+
+  /* Sidebar */
+  --color-sidebar:                var(--sidebar);
+  --color-sidebar-foreground:     var(--sidebar-foreground);
+  --color-sidebar-primary:        var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent:         var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border:         var(--sidebar-border);
+  --color-sidebar-ring:           var(--sidebar-ring);
+
+  /* Radius scale derived from the DS base radius token */
+  --radius-sm:  calc(var(--radius) * 0.5);   /* ~6px  → xs */
+  --radius-md:  calc(var(--radius) * 0.67);  /* ~8px  → sm */
+  --radius-lg:  var(--radius);               /* 12px  → md */
+  --radius-xl:  calc(var(--radius) * 1.33);  /* ~16px → lg */
+  --radius-2xl: calc(var(--radius) * 2);     /* ~24px → xl */
+}
+
+/* ── 4. Map DS tokens → shadcn semantic variables ── */
+:root {
+  /* Force light mode — prevents browser dark mode from styling native elements */
+  color-scheme: light;
+
+  /* Page */
+  --background: var(--background-primary);
+  --foreground: var(--content-primary);
+
+  /* Card / Popover */
+  --card:                 var(--background-primary);
+  --card-foreground:      var(--content-primary);
+  --popover:              var(--background-primary);
+  --popover-foreground:   var(--content-primary);
+
+  /* Brand / CTA */
+  --primary:              var(--background-brand-solid);
+  --primary-foreground:   var(--content-on-brand);
+
+  /* Secondary */
+  --secondary:            var(--background-secondary);
+  --secondary-foreground: var(--content-secondary);
+
+  /* Muted */
+  --muted:                var(--background-tertiary);
+  --muted-foreground:     var(--content-tertiary);
+
+  /* Accent */
+  --accent:               var(--background-brand-subtle-1);
+  --accent-foreground:    var(--content-brand-primary);
+
+  /* Destructive */
+  --destructive:          var(--background-error-solid);
+  --destructive-foreground: var(--content-on-error);
+
+  /* Borders & inputs */
+  --border: var(--border-primary);
+  --input:  var(--border-primary);
+  --ring:   var(--effect-focus-ring-stroke);
+
+  /* Base radius — all shadcn radius scales derive from this */
+  --radius: var(--border-radius-md);
+
+  /* Sidebar (mirrors primary brand palette) */
+  --sidebar:                      var(--background-primary);
+  --sidebar-foreground:           var(--content-primary);
+  --sidebar-primary:              var(--background-brand-solid);
+  --sidebar-primary-foreground:   var(--content-on-brand);
+  --sidebar-accent:               var(--background-brand-subtle-1);
+  --sidebar-accent-foreground:    var(--content-brand-primary);
+  --sidebar-border:               var(--border-primary);
+  --sidebar-ring:                 var(--effect-focus-ring-stroke);
+}
+
+/* ── 5. Base styles ── */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--typography-font-family-primary);
+    font-size: var(--typography-font-size-16);
+    line-height: var(--scale-24);
+  }
+  h1 {
+    font-size: var(--heading-h1-font-size);
+    font-weight: var(--heading-h1-font-weight);
+    line-height: var(--heading-h1-line-height);
+    letter-spacing: -1%;
+  }
+  h2 {
+    font-size: var(--heading-h2-font-size);
+    font-weight: var(--heading-h2-font-weight);
+    line-height: var(--heading-h2-line-height);
+    letter-spacing: -1%;
+  }
+  h3 {
+    font-size: var(--heading-h3-font-size);
+    font-weight: var(--heading-h3-font-weight);
+    line-height: var(--heading-h3-line-height);
+    letter-spacing: -1%;
+  }
+}

@@ -1,0 +1,14 @@
+/* ── Layout.Mobile — context overrides for mobile ── */
+/* Spacing stack/inline/inset and border values are identical to desktop.
+   Only context spacing and screen dimensions differ. */
+@media (max-width: 767px) {
+  :root {
+    /* Spacing — context (mobile-specific) */
+    --spacing-context-screen-horizontal-padding: var(--scale-24);
+    --spacing-context-section-vertical-padding:  var(--scale-24);
+
+    /* Screen */
+    --size-screen-max-width: 375px;
+    --size-screen-min-width: 375px;
+  }
+}

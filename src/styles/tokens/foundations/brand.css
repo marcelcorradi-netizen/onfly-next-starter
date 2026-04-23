@@ -1,0 +1,155 @@
+/* ── Brand.Value — typography primitives + color palette ── */
+:root {
+  /* Font sizes */
+  --typography-font-size-10: 10px;
+  --typography-font-size-12: 12px;
+  --typography-font-size-14: 14px;
+  --typography-font-size-16: 16px;
+  --typography-font-size-18: 18px;
+  --typography-font-size-20: 20px;
+  --typography-font-size-22: 22px;
+  --typography-font-size-24: 24px;
+  --typography-font-size-28: 28px;
+  --typography-font-size-32: 32px;
+  --typography-font-size-36: 36px;
+  --typography-font-size-38: 38px;
+  --typography-font-size-40: 40px;
+  --typography-font-size-44: 44px;
+  --typography-font-size-48: 48px;
+  --typography-font-size-56: 56px;
+  --typography-font-size-64: 64px;
+  --typography-font-size-72: 72px;
+  --typography-font-size-80: 80px;
+  --typography-font-size-92: 92px;
+  --typography-font-size-104: 104px;
+
+  /* Font family */
+  --typography-font-family-primary: Poppins, sans-serif;
+
+  /* Font weights */
+  --typography-font-weight-100: 100;
+  --typography-font-weight-200: 200;
+  --typography-font-weight-300: 300;
+  --typography-font-weight-400: 400;
+  --typography-font-weight-500: 500;
+  --typography-font-weight-600: 600;
+  --typography-font-weight-700: 700;
+  --typography-font-weight-800: 800;
+  --typography-font-weight-900: 900;
+
+  /* ── Brand palette ── */
+  --color-brand-50: #eff8ff;
+  --color-brand-100: #def0ff;
+  --color-brand-200: #b6e3ff;
+  --color-brand-300: #75ceff;
+  --color-brand-400: #2cb5ff;
+  --color-brand-500: #009efb;
+  --color-brand-600: #007bd4;
+  --color-brand-700: #0062ab;
+  --color-brand-800: #00538d;
+  --color-brand-900: #064574;
+  --color-brand-950: #042c4d;
+  --color-brand-alpha-500-8:  #009efb14;
+  --color-brand-alpha-500-16: #009efb29;
+  --color-brand-alpha-500-20: #009efb33;
+  --color-brand-alpha-500-28: #009efb47;
+  --color-brand-alpha-500-32: #009efb52;
+
+  /* ── Success palette ── */
+  --color-success-50:  #eafff5;
+  --color-success-100: #cdfee5;
+  --color-success-200: #a0fad1;
+  --color-success-300: #63f2b9;
+  --color-success-400: #25e29d;
+  --color-success-500: #00c785;
+  --color-success-600: #00a46e;
+  --color-success-700: #00835c;
+  --color-success-800: #00674a;
+  --color-success-900: #00553e;
+  --color-success-950: #003024;
+  --color-success-alpha-500-8:  #00c78514;
+  --color-success-alpha-500-16: #00c78529;
+  --color-success-alpha-500-20: #00c78533;
+  --color-success-alpha-500-28: #00c78547;
+  --color-success-alpha-500-32: #00c78552;
+  --color-success-alpha-700-16: #01a15e29;
+  --color-success-alpha-700-20: #01a15e33;
+  --color-success-alpha-700-32: #01a15e52;
+
+  /* ── Warning palette ── */
+  --color-warning-50:  #fef8ec;
+  --color-warning-100: #fce9c9;
+  --color-warning-200: #f9d28e;
+  --color-warning-300: #f6b453;
+  --color-warning-400: #f5a23d;
+  --color-warning-500: #ed7713;
+  --color-warning-600: #d2550d;
+  --color-warning-700: #ae390f;
+  --color-warning-800: #8e2c12;
+  --color-warning-900: #752512;
+  --color-warning-950: #431005;
+  --color-warning-alpha-500-8:  #fb7a0214;
+  --color-warning-alpha-500-16: #fb7a0229;
+  --color-warning-alpha-500-20: #fb7a0233;
+  --color-warning-alpha-500-28: #fb7a0247;
+  --color-warning-alpha-500-32: #fb7a0247;
+
+  /* ── Danger palette ── */
+  --color-danger-50:  #fff0f0;
+  --color-danger-100: #ffdddd;
+  --color-danger-200: #ffc1c1;
+  --color-danger-300: #ffa7a7;
+  --color-danger-400: #fa7676;
+  --color-danger-500: #f34f4f;
+  --color-danger-600: #ed0b0b;
+  --color-danger-700: #c70000;
+  --color-danger-800: #af0505;
+  --color-danger-900: #900c0c;
+  --color-danger-950: #500000;
+  --color-danger-alpha-500-8:  #fb021714;
+  --color-danger-alpha-500-16: #fb021729;
+  --color-danger-alpha-500-20: #fb021733;
+  --color-danger-alpha-500-28: #fb021747;
+  --color-danger-alpha-500-32: #fb021752;
+
+  /* ── Neutral ── */
+  --color-neutral-white:            #ffffff;
+  --color-neutral-black:            #000000;
+  --color-neutral-alpha-white-8:    #ffffff14;
+  --color-neutral-alpha-transparent: #00000000;
+
+  /* ── Gray palette ── */
+  --color-gray-50:  #f5f5f6;
+  --color-gray-100: #e6e6e7;
+  --color-gray-200: #cfd0d2;
+  --color-gray-300: #adadb3;
+  --color-gray-400: #84858c;
+  --color-gray-500: #696a71;
+  --color-gray-600: #58585f;
+  --color-gray-700: #4c4c52;
+  --color-gray-800: #434347;
+  --color-gray-900: #3b3b3e;
+  --color-gray-950: #252527;
+
+  --color-gray-alpha-25-8:   #eff0f214;
+  --color-gray-alpha-25-16:  #eff0f229;
+  --color-gray-alpha-25-24:  #eff0f23d;
+  --color-gray-alpha-25-28:  #eff0f247;
+  --color-gray-alpha-25-32:  #eff0f252;
+
+  --color-gray-alpha-500-8:  #3a475914;
+  --color-gray-alpha-500-16: #3a475929;
+  --color-gray-alpha-500-20: #3a475933;
+  --color-gray-alpha-500-22: #3a475938;
+  --color-gray-alpha-500-32: #3a475952;
+  --color-gray-alpha-500-48: #3a47597a;
+
+  --color-gray-alpha-950-4:  #090b0e0a;
+  --color-gray-alpha-950-6:  #090b0e0f;
+  --color-gray-alpha-950-8:  #090b0e14;
+  --color-gray-alpha-950-16: #090b0e29;
+  --color-gray-alpha-950-20: #090b0e33;
+  --color-gray-alpha-950-24: #090b0e3d;
+  --color-gray-alpha-950-32: #090b0e52;
+  --color-gray-alpha-950-48: #090b0e7a;
+}

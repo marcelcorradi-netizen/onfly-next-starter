@@ -1,0 +1,13 @@
+/* ── Grid.Mobile ── */
+@media (max-width: 767px) {
+  :root {
+    /* Fluid grid */
+    --grid-fluid-main-prop-count:  var(--scale-4);
+    --grid-fluid-main-prop-margin: var(--scale-24);
+    --grid-fluid-main-prop-gutter: var(--scale-16);
+
+    --grid-fluid-padding-prop-count:  var(--scale-1);
+    --grid-fluid-padding-prop-width:  var(--scale-24);
+    --grid-fluid-padding-prop-gutter: var(--scale-16);
+  }
+}

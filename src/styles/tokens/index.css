@@ -1,0 +1,12 @@
+/* ── Onfly Design System — token entry point ── */
+/* Import order matters: primitives first, then composites, then themes */
+
+@import './foundations/brand.css';
+@import './foundations/foundation.css';
+@import './foundations/typography.css';
+@import './foundations/effects.css';
+@import './foundations/layout.desktop.css';
+@import './foundations/layout.mobile.css';
+@import './foundations/grid.desktop.css';
+@import './foundations/grid.mobile.css';
+@import './themes/theme.light.css';

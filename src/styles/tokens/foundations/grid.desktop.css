@@ -1,0 +1,37 @@
+/* ── Grid.Desktop ── */
+:root {
+  /* Fluid grid */
+  --grid-fluid-main-prop-count:  var(--scale-12);
+  --grid-fluid-main-prop-margin: var(--scale-32);
+  --grid-fluid-main-prop-gutter: var(--scale-32);
+
+  --grid-fluid-padding-prop-count:  var(--scale-1);
+  --grid-fluid-padding-prop-width:  var(--scale-32);
+  --grid-fluid-padding-prop-gutter: var(--scale-32);
+
+  /* Fixed — 1280px */
+  --grid-fixed-1280-main-prop-count:  var(--scale-12);
+  --grid-fixed-1280-main-prop-width:  var(--scale-72);
+  --grid-fixed-1280-main-prop-gutter: var(--scale-32);
+
+  --grid-fixed-1280-margin-1-count:  var(--scale-2);
+  --grid-fixed-1280-margin-1-margin: var(--scale-0);
+  --grid-fixed-1280-margin-1-gutter: 1280px;
+
+  --grid-fixed-1280-margin-2-count:  var(--scale-2);
+  --grid-fixed-1280-margin-2-width:  var(--scale-0);
+  --grid-fixed-1280-margin-2-gutter: 1216px;
+
+  /* Fixed — 1920px */
+  --grid-fixed-1920-main-prop-count:  var(--scale-12);
+  --grid-fixed-1920-main-prop-width:  var(--scale-96);
+  --grid-fixed-1920-main-prop-gutter: var(--scale-64);
+
+  --grid-fixed-1920-margin-1-count:  var(--scale-2);
+  --grid-fixed-1920-margin-1-margin: var(--scale-0);
+  --grid-fixed-1920-margin-1-gutter: 1920px;
+
+  --grid-fixed-1920-margin-2-count:  var(--scale-2);
+  --grid-fixed-1920-margin-2-width:  var(--scale-0);
+  --grid-fixed-1920-margin-2-gutter: 1856px;
+}

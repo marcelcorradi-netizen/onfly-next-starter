@@ -1,0 +1,176 @@
+{
+  "Shadows": {
+    "shadow-xs": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{drop-shadow.shadow-xs.position-x}",
+          "offsetY": "{drop-shadow.shadow-xs.position-y}",
+          "blur": "{drop-shadow.shadow-xs.blur}",
+          "spread": "{drop-shadow.shadow-xs.position-x}",
+          "color": "{drop-shadow.shadow-xs.color}"
+        }
+      ]
+    },
+    "shadow-sm": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{drop-shadow.shadow-sm-2.position-x}",
+          "offsetY": "{drop-shadow.shadow-sm-2.position-y}",
+          "blur": "{drop-shadow.shadow-sm-2.blur}",
+          "spread": "{drop-shadow.shadow-sm-2.spread}",
+          "color": "{drop-shadow.shadow-sm-2.color}"
+        },
+        {
+          "offsetX": "{drop-shadow.shadow-sm-1.position-x}",
+          "offsetY": "{drop-shadow.shadow-sm-1.position-y}",
+          "blur": "{drop-shadow.shadow-sm-1.blur}",
+          "spread": "{drop-shadow.shadow-sm-1.spread}",
+          "color": "{drop-shadow.shadow-sm-1.color}"
+        }
+      ]
+    },
+    "shadow-md": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{drop-shadow.shadow-md-2.position-x}",
+          "offsetY": "{drop-shadow.shadow-md-2.position-y}",
+          "blur": "{drop-shadow.shadow-md-2.blur}",
+          "spread": "{drop-shadow.shadow-md-2.spread}",
+          "color": "{drop-shadow.shadow-md-2.color}"
+        },
+        {
+          "offsetX": "{drop-shadow.shadow-md-1.position-x}",
+          "offsetY": "{drop-shadow.shadow-md-1.position-y}",
+          "blur": "{drop-shadow.shadow-md-1.blur}",
+          "spread": "{drop-shadow.shadow-md-1.spread}",
+          "color": "{drop-shadow.shadow-md-1.color}"
+        }
+      ]
+    },
+    "shadow-lg": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{drop-shadow.shadow-lg-2.position-x}",
+          "offsetY": "{drop-shadow.shadow-lg-2.position-y}",
+          "blur": "{drop-shadow.shadow-lg-2.blur}",
+          "spread": "{drop-shadow.shadow-lg-2.spread}",
+          "color": "{drop-shadow.shadow-lg-2.color}"
+        },
+        {
+          "offsetX": "{drop-shadow.shadow-lg-1.position-x}",
+          "offsetY": "{drop-shadow.shadow-lg-1.position-y}",
+          "blur": "{drop-shadow.shadow-lg-1.blur}",
+          "spread": "{drop-shadow.shadow-lg-1.spread}",
+          "color": "{drop-shadow.shadow-lg-1.color}"
+        }
+      ]
+    },
+    "shadow-xl": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{drop-shadow.shadow-xl-2.position-x}",
+          "offsetY": "{drop-shadow.shadow-xl-2.position-y}",
+          "blur": "{drop-shadow.shadow-xl-2.blur}",
+          "spread": "{drop-shadow.shadow-xl-2.spread}",
+          "color": "{drop-shadow.shadow-xl-2.color}"
+        },
+        {
+          "offsetX": "{drop-shadow.shadow-xl-1.position-x}",
+          "offsetY": "{drop-shadow.shadow-xl-1.position-y}",
+          "blur": "{drop-shadow.shadow-xl-1.blur}",
+          "spread": "{drop-shadow.shadow-xl-1.spread}",
+          "color": "{drop-shadow.shadow-xl-1.color}"
+        }
+      ]
+    },
+    "shadow-2xl": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{drop-shadow.shadow-2xl.position-x}",
+          "offsetY": "{drop-shadow.shadow-2xl.position-y}",
+          "blur": "{drop-shadow.shadow-2xl.blur}",
+          "spread": "{drop-shadow.shadow-2xl.spread}",
+          "color": "{drop-shadow.shadow-2xl.color}"
+        }
+      ]
+    },
+    "popup": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{drop-shadow.popup.position-x}",
+          "offsetY": "{drop-shadow.popup.position-y}",
+          "blur": "{drop-shadow.popup.blur}",
+          "spread": "{drop-shadow.popup.spread}",
+          "color": "{drop-shadow.popup.color}"
+        }
+      ]
+    },
+    "dropdown": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{drop-shadow.dropdown.position-x}",
+          "offsetY": "{drop-shadow.dropdown.position-y}",
+          "blur": "{drop-shadow.dropdown.blur}",
+          "spread": "{drop-shadow.dropdown.spread}",
+          "color": "{drop-shadow.dropdown.color}"
+        }
+      ]
+    },
+    "button": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{drop-shadow.button.position-x}",
+          "offsetY": "{drop-shadow.button.position-y}",
+          "blur": "{drop-shadow.button.blur}",
+          "spread": "{drop-shadow.button.spread}",
+          "color": "{drop-shadow.button.color}"
+        }
+      ]
+    },
+    "input": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{drop-shadow.input.position-x}",
+          "offsetY": "{drop-shadow.input.position-y}",
+          "blur": "{drop-shadow.input.blur}",
+          "spread": "{drop-shadow.input.spread}",
+          "color": "{drop-shadow.input.color}"
+        }
+      ]
+    },
+    "tooltip": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{drop-shadow.tooltip.position-x}",
+          "offsetY": "{drop-shadow.tooltip.position-y}",
+          "blur": "{drop-shadow.tooltip.blur}",
+          "spread": "{drop-shadow.tooltip.spread}",
+          "color": "{drop-shadow.tooltip.color}"
+        }
+      ]
+    },
+    "card": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{drop-shadow.card.position-x}",
+          "offsetY": "{drop-shadow.card.position-y}",
+          "blur": "{drop-shadow.card.blur}",
+          "spread": "{drop-shadow.card.spread}",
+          "color": "{drop-shadow.card.color}"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "grid": {
+    "fluid": {
+      "main-prop": {
+        "count": {
+          "$type": "dimension",
+          "$value": "{scale.4}"
+        },
+        "margin": {
+          "$type": "dimension",
+          "$value": "{scale.24}"
+        },
+        "gutter": {
+          "$type": "dimension",
+          "$value": "{scale.16}"
+        }
+      },
+      "padding-prop": {
+        "count": {
+          "$type": "dimension",
+          "$value": "{scale.1}"
+        },
+        "width": {
+          "$type": "dimension",
+          "$value": "{scale.24}"
+        },
+        "gutter": {
+          "$type": "dimension",
+          "$value": "{scale.16}"
+        }
+      }
+    },
+    "fixed": {
+      "desktop-1280": {
+        "main-prop": {
+          "count": {
+            "$type": "dimension",
+            "$value": "{scale.12}"
+          },
+          "width": {
+            "$type": "dimension",
+            "$value": "{scale.72}"
+          },
+          "gutter": {
+            "$type": "dimension",
+            "$value": "{scale.32}"
+          }
+        },
+        "margin-1": {
+          "count": {
+            "$type": "dimension",
+            "$value": "{scale.2}"
+          },
+          "margin": {
+            "$type": "dimension",
+            "$value": "{scale.0}"
+          },
+          "gutter": {
+            "$type": "dimension",
+            "$value": "1280px"
+          }
+        },
+        "margin-2": {
+          "count": {
+            "$type": "dimension",
+            "$value": "{scale.2}"
+          },
+          "width": {
+            "$type": "dimension",
+            "$value": "{scale.0}"
+          },
+          "gutter": {
+            "$type": "dimension",
+            "$value": "1216px"
+          }
+        }
+      },
+      "desktop-1920": {
+        "main-prop": {
+          "count": {
+            "$type": "dimension",
+            "$value": "{scale.12}"
+          },
+          "width": {
+            "$type": "dimension",
+            "$value": "{scale.96}"
+          },
+          "gutter": {
+            "$type": "dimension",
+            "$value": "{scale.64}"
+          }
+        },
+        "margin-1": {
+          "count": {
+            "$type": "dimension",
+            "$value": "{scale.2}"
+          },
+          "margin": {
+            "$type": "dimension",
+            "$value": "{scale.0}"
+          },
+          "gutter": {
+            "$type": "dimension",
+            "$value": "1280px"
+          }
+        },
+        "margin-2": {
+          "count": {
+            "$type": "dimension",
+            "$value": "{scale.2}"
+          },
+          "width": {
+            "$type": "dimension",
+            "$value": "{scale.0}"
+          },
+          "gutter": {
+            "$type": "dimension",
+            "$value": "1856px"
+          }
+        }
+      }
+    }
+  }
+}

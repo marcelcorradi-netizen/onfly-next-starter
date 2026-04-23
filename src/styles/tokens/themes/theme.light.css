@@ -1,0 +1,161 @@
+/* ── Theme.Light — semantic color tokens ── */
+/* Note: top-level "color." key from the JSON is stripped; naming starts from
+   the second level (background.*, content.*, border.*, effect.*).
+   Added semantic tokens not present in source: on-brand, on-error. */
+:root {
+  /* ── Background ── */
+  --background-primary:              var(--color-neutral-white);
+  --background-secondary:            var(--color-gray-50);
+  --background-tertiary:             var(--color-gray-100);
+  --background-primary-inverse:      var(--color-gray-950);
+  --background-secondary-inverse:    var(--color-gray-900);
+  --background-tertiary-inverse:     var(--color-gray-800);
+  --background-floating:             var(--color-neutral-white);
+  --background-disabled-subtle:      var(--color-gray-100);
+  --background-disabled-solid:       var(--color-gray-300);
+
+  /* Brand backgrounds */
+  --background-brand-subtle-1:       var(--color-brand-50);
+  --background-brand-subtle-2:       var(--color-brand-100);
+  --background-brand-subtle-2-hovered: var(--color-brand-200);
+  --background-brand-subtle-2-pressed: var(--color-brand-300);
+  --background-brand-solid:          var(--color-brand-500);
+  --background-brand-solid-hovered:  var(--color-brand-600);
+  --background-brand-solid-pressed:  var(--color-brand-700);
+
+  /* Error backgrounds */
+  --background-error-subtle-1:       var(--color-danger-50);
+  --background-error-subtle-2:       var(--color-danger-100);
+  --background-error-subtle-2-hovered: var(--color-danger-200);
+  --background-error-subtle-2-pressed: var(--color-danger-300);
+  --background-error-solid:          var(--color-danger-500);
+  --background-error-solid-hovered:  var(--color-danger-600);
+  --background-error-solid-pressed:  var(--color-danger-700);
+
+  /* Success backgrounds */
+  --background-success-subtle-1:     var(--color-success-50);
+  --background-success-subtle-2:     var(--color-success-100);
+  --background-success-subtle-2-hovered: var(--color-success-200);
+  --background-success-subtle-2-pressed: var(--color-success-300);
+  --background-success-solid:        var(--color-success-600);
+  --background-success-solid-hovered: var(--color-success-700);
+  --background-success-solid-pressed: var(--color-success-800);
+
+  /* Warning backgrounds */
+  --background-warning-subtle-1:     var(--color-warning-50);
+  --background-warning-subtle-2:     var(--color-warning-100);
+  --background-warning-subtle-2-hovered: var(--color-warning-200);
+  --background-warning-subtle-2-pressed: var(--color-warning-300);
+  --background-warning-solid:        var(--color-warning-500);
+  --background-warning-solid-hovered: var(--color-warning-600);
+  --background-warning-solid-pressed: var(--color-warning-700);
+
+  /* Info backgrounds */
+  --background-info-subtle-1:        var(--color-gray-50);
+  --background-info-subtle-2:        var(--color-gray-100);
+  --background-info-subtle-2-hovered: var(--color-gray-200);
+  --background-info-subtle-2-pressed: var(--color-gray-300);
+  --background-info-solid:           var(--color-gray-500);
+  --background-info-solid-hovered:   var(--color-gray-600);
+  --background-info-solid-pressed:   var(--color-gray-700);
+
+  /* Overlay */
+  --background-overlay-primary:      var(--color-gray-alpha-950-20);
+  --background-overlay-secondary:    var(--color-gray-alpha-950-48);
+
+  /* ── Content (text) ── */
+  --content-primary:             var(--color-gray-950);
+  --content-secondary:           var(--color-gray-700);
+  --content-tertiary:            var(--color-gray-500);
+  --content-primary-inverse:     var(--color-neutral-white);
+  --content-secondary-inverse:   var(--color-gray-50);
+  --content-tertiary-inverse:    var(--color-gray-100);
+  --content-disabled:            var(--color-gray-300);
+  --content-on-disabled-solid:   var(--color-gray-50);
+  --content-on-disabled-subtle:  var(--color-gray-400);
+  --content-placeholder:         var(--color-gray-500);
+  --content-white:               var(--color-neutral-white);
+
+  /* Brand content */
+  --content-brand-primary:       var(--color-brand-950);
+  --content-brand-secondary:     var(--color-brand-700);
+  --content-brand-accent:        var(--color-brand-500);
+  --content-brand-accent-hovered: var(--color-brand-600);
+  --content-brand-accent-pressed: var(--color-brand-700);
+
+  /* Error content */
+  --content-error-primary:       var(--color-danger-950);
+  --content-error-secondary:     var(--color-danger-700);
+  --content-error-accent:        var(--color-danger-500);
+  --content-error-accent-hovered: var(--color-danger-600);
+  --content-error-accent-pressed: var(--color-danger-700);
+
+  /* Success content */
+  --content-success-primary:     var(--color-success-950);
+  --content-success-secondary:   var(--color-success-800);
+  --content-success-accent:      var(--color-success-600);
+  --content-success-accent-hovered: var(--color-success-700);
+  --content-success-accent-pressed: var(--color-success-800);
+
+  /* Warning content */
+  --content-warning-primary:     var(--color-warning-950);
+  --content-warning-secondary:   var(--color-warning-700);
+  --content-warning-accent:      var(--color-warning-500);
+  --content-warning-accent-hovered: var(--color-warning-600);
+  --content-warning-accent-pressed: var(--color-warning-700);
+
+  /* Info content */
+  --content-info-primary:        var(--color-gray-950);
+  --content-info-secondary:      var(--color-gray-700);
+  --content-info-accent:         var(--color-gray-500);
+  --content-info-accent-hovered: var(--color-gray-600);
+  --content-info-accent-pressed: var(--color-gray-700);
+
+  /* Semantic: text on solid colored backgrounds (added — not in source JSON) */
+  --content-on-brand: var(--color-neutral-white);
+  --content-on-error: var(--color-neutral-white);
+  --content-on-success: var(--color-neutral-white);
+  --content-on-warning: var(--color-neutral-white);
+
+  /* ── Border ── */
+  --border-primary:              var(--color-gray-300);
+  --border-secondary:            var(--color-gray-200);
+  --border-tertiary:             var(--color-gray-50);
+  --border-primary-inverse:      var(--color-gray-950);
+  --border-disabled:             var(--color-gray-300);
+  --border-white:                var(--color-neutral-white);
+
+  /* Brand borders */
+  --border-brand-subtle-2:       var(--color-brand-100);
+  --border-brand-primary:        var(--color-brand-500);
+  --border-brand-primary-hovered: var(--color-brand-600);
+  --border-brand-primary-pressed: var(--color-brand-700);
+
+  /* Error borders */
+  --border-error-subtle-2:       var(--color-danger-100);
+  --border-error-primary:        var(--color-danger-500);
+  --border-error-primary-hovered: var(--color-danger-600);
+  --border-error-primary-pressed: var(--color-danger-700);
+
+  /* Success borders */
+  --border-success-subtle-2:     var(--color-success-100);
+  --border-success-primary:      var(--color-success-600);
+  --border-success-primary-hovered: var(--color-success-700);
+  --border-success-primary-pressed: var(--color-success-800);
+
+  /* Warning borders */
+  --border-warning-subtle-2:     var(--color-warning-100);
+  --border-warning-primary:      var(--color-warning-500);
+  --border-warning-primary-hovered: var(--color-warning-600);
+  --border-warning-primary-pressed: var(--color-warning-700);
+
+  /* Info borders */
+  --border-info-subtle-2:        var(--color-gray-100);
+  --border-info-primary:         var(--color-gray-500);
+  --border-info-primary-hovered: var(--color-gray-600);
+  --border-info-primary-pressed: var(--color-gray-700);
+
+  /* ── Effect ── */
+  --effect-focus-ring-stroke: var(--color-gray-950);
+  --effect-focus-ring-offset: var(--color-danger-alpha-500-20);
+}

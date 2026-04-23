@@ -1,0 +1,48 @@
+/* ── Effects — composed shadows + utility classes ── */
+/* Values resolved from Effects.Mode 1 + effect.styles.tokens.json */
+:root {
+  --shadow-xs:  0px 1px 2px 0px var(--color-gray-alpha-950-4);
+
+  --shadow-sm:  0px 1px 2px -1px var(--color-gray-alpha-950-4),
+                0px 1px 4px  0px var(--color-gray-alpha-950-4);
+
+  --shadow-md:  0px 2px 4px -2px var(--color-gray-alpha-950-4),
+                0px 4px 6px -1px var(--color-gray-alpha-950-4);
+
+  --shadow-lg:  0px 4px  6px  -4px var(--color-gray-alpha-950-4),
+                0px 10px 16px -3px var(--color-gray-alpha-950-4);
+
+  --shadow-xl:  0px 8px  10px -6px var(--color-gray-alpha-950-4),
+                0px 20px 24px -5px var(--color-gray-alpha-950-4);
+
+  --shadow-2xl: 0px 24px 48px -12px var(--color-gray-alpha-950-4);
+
+  /* Semantic component shadows */
+  --shadow-popup:    0px 2px 8px  4px var(--color-gray-alpha-950-8);
+  --shadow-dropdown: 2px 4px 4px  0px var(--color-gray-alpha-950-8);
+  --shadow-button:   0px 2px 4px  0px var(--color-gray-alpha-950-16);
+  --shadow-input:    0px 1px 4px  0px var(--color-gray-alpha-950-6);
+  --shadow-tooltip:  0px 4px 8px  0px var(--color-gray-alpha-950-8);
+  --shadow-card:     0px 4px 8px  0px var(--color-gray-alpha-950-8);
+
+  /* Focus ring (composed from theme tokens — set after theme.light.css loads) */
+  --focus-ring: 0px 0px 0px 2px var(--color-neutral-white),
+                0px 0px 0px 4px var(--effect-focus-ring-stroke);
+}
+
+/* ── Shadow utility classes ── */
+.shadow-xs  { box-shadow: var(--shadow-xs); }
+.shadow-sm  { box-shadow: var(--shadow-sm); }
+.shadow-md  { box-shadow: var(--shadow-md); }
+.shadow-lg  { box-shadow: var(--shadow-lg); }
+.shadow-xl  { box-shadow: var(--shadow-xl); }
+.shadow-2xl { box-shadow: var(--shadow-2xl); }
+
+.shadow-popup    { box-shadow: var(--shadow-popup); }
+.shadow-dropdown { box-shadow: var(--shadow-dropdown); }
+.shadow-button   { box-shadow: var(--shadow-button); }
+.shadow-input    { box-shadow: var(--shadow-input); }
+.shadow-tooltip  { box-shadow: var(--shadow-tooltip); }
+.shadow-card     { box-shadow: var(--shadow-card); }
+
+.focus-ring { box-shadow: var(--focus-ring); }

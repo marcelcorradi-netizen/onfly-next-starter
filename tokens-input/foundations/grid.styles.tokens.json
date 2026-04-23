@@ -1,0 +1,98 @@
+{
+  "Fluid Dynamic": {
+    "$type": "grid",
+    "$value": [
+      {
+        "pattern": "columns",
+        "visible": true,
+        "alignment": "max",
+        "color": "#ff477d52",
+        "gutterSize": "{grid.fluid.padding-prop.gutter}",
+        "count": "{grid.fluid.padding-prop.count}",
+        "offset": "0px"
+      },
+      {
+        "pattern": "columns",
+        "visible": true,
+        "alignment": "min",
+        "color": "#ff477d52",
+        "gutterSize": "{grid.fluid.padding-prop.gutter}",
+        "count": "{grid.fluid.padding-prop.count}",
+        "offset": "0px"
+      },
+      {
+        "pattern": "columns",
+        "visible": true,
+        "alignment": "stretch",
+        "color": "#ff477d1a",
+        "gutterSize": "{grid.fluid.main-prop.gutter}",
+        "count": "{grid.fluid.main-prop.count}",
+        "offset": "{grid.fluid.main-prop.margin}"
+      }
+    ]
+  },
+  "Fixed Desktop - 1920": {
+    "$type": "grid",
+    "$value": [
+      {
+        "pattern": "columns",
+        "visible": true,
+        "alignment": "stretch",
+        "color": "#ff477d52",
+        "gutterSize": "{grid.fixed.desktop-1920.margin-2.gutter}",
+        "count": "{grid.fixed.desktop-1920.margin-2.count}",
+        "offset": "0px"
+      },
+      {
+        "pattern": "columns",
+        "visible": true,
+        "alignment": "stretch",
+        "color": "#ff477d1a",
+        "gutterSize": "{grid.fixed.desktop-1920.margin-1.gutter}",
+        "count": "{grid.fixed.desktop-1920.margin-1.count}",
+        "offset": "0px"
+      },
+      {
+        "pattern": "columns",
+        "visible": true,
+        "alignment": "center",
+        "color": "#ff477d1a",
+        "gutterSize": "{grid.fixed.desktop-1920.main-prop.gutter}",
+        "count": "{grid.fixed.desktop-1920.main-prop.count}",
+        "offset": "0px"
+      }
+    ]
+  },
+  "Fixed Desktop - 1280": {
+    "$type": "grid",
+    "$value": [
+      {
+        "pattern": "columns",
+        "visible": true,
+        "alignment": "center",
+        "color": "#ff477d1a",
+        "gutterSize": "32px",
+        "count": "{grid.fixed.desktop-1280.main-prop.count}",
+        "offset": "0px"
+      },
+      {
+        "pattern": "columns",
+        "visible": true,
+        "alignment": "stretch",
+        "color": "#ff477d52",
+        "gutterSize": "{grid.fixed.desktop-1280.margin-2.gutter}",
+        "count": "{grid.fixed.desktop-1280.margin-2.count}",
+        "offset": "0px"
+      },
+      {
+        "pattern": "columns",
+        "visible": true,
+        "alignment": "stretch",
+        "color": "#ff477d1a",
+        "gutterSize": "{grid.fixed.desktop-1280.margin-1.gutter}",
+        "count": "{grid.fixed.desktop-1280.margin-1.count}",
+        "offset": "0px"
+      }
+    ]
+  }
+}

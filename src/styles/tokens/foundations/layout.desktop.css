@@ -1,0 +1,57 @@
+/* ── Layout.Desktop — spacing, border, screen ── */
+:root {
+  /* Spacing — stack */
+  --spacing-stack-none: var(--scale-0);
+  --spacing-stack-2xs:  var(--scale-4);
+  --spacing-stack-xs:   var(--scale-8);
+  --spacing-stack-sm:   var(--scale-12);
+  --spacing-stack-md:   var(--scale-16);
+  --spacing-stack-lg:   var(--scale-24);
+  --spacing-stack-xl:   var(--scale-32);
+
+  /* Spacing — inline */
+  --spacing-inline-none: var(--scale-0);
+  --spacing-inline-2xs:  var(--scale-4);
+  --spacing-inline-xs:   var(--scale-8);
+  --spacing-inline-sm:   var(--scale-12);
+  --spacing-inline-md:   var(--scale-16);
+  --spacing-inline-lg:   var(--scale-24);
+  --spacing-inline-xl:   var(--scale-32);
+
+  /* Spacing — inset */
+  --spacing-inset-none: var(--scale-0);
+  --spacing-inset-3xs:  var(--scale-2);
+  --spacing-inset-2xs:  var(--scale-4);
+  --spacing-inset-xs:   var(--scale-8);
+  --spacing-inset-sm:   var(--scale-12);
+  --spacing-inset-md:   var(--scale-16);
+  --spacing-inset-lg:   var(--scale-24);
+  --spacing-inset-xl:   var(--scale-32);
+  --spacing-inset-2xl:  var(--scale-40);
+  --spacing-inset-3xl:  var(--scale-48);
+  --spacing-inset-4xl:  var(--scale-56);
+
+  /* Spacing — context (desktop-specific) */
+  --spacing-context-screen-horizontal-padding: var(--scale-32);
+  --spacing-context-section-vertical-padding:  var(--scale-40);
+
+  /* Border widths */
+  --border-width-sm:  var(--scale-1);
+  --border-width-md:  var(--scale-2);
+  --border-width-lg:  var(--scale-4);
+  --border-width-xl:  var(--scale-6);
+  --border-width-2xl: var(--scale-8);
+
+  /* Border radius */
+  --border-radius-none: var(--scale-0);
+  --border-radius-xs:   var(--scale-4);
+  --border-radius-sm:   var(--scale-8);
+  --border-radius-md:   var(--scale-12);
+  --border-radius-lg:   var(--scale-16);
+  --border-radius-xl:   var(--scale-24);
+  --border-radius-full: var(--scale-999);
+
+  /* Screen */
+  --size-screen-max-width: 1920px;
+  --size-screen-min-width: 1280px;
+}

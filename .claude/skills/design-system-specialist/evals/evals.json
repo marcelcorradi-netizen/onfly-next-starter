@@ -1,0 +1,23 @@
+{
+  "skill_name": "design-system-specialist",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Aqui estão os tokens do nosso Design System exportados pelo plugin do Figma. A pasta é tokens-json/plugin/. Converta tudo para CSS Custom Properties e organize os arquivos conforme a estrutura de saída definida. Inclui as foundations, os temas light e dark, e os estilos de tipografia e efeitos.",
+      "expected_output": "CSS files generated under src/styles/tokens/ with: brand.css, foundation.css, typography.css (including .text-* classes), effects.css (including .shadow-* classes), layout files, grid files, theme.light.css (:root), theme.dark.css ([data-theme='dark']), component files, quasar-overrides.css, and index.css importing all in correct order. All token references like {color.gray.950} should be resolved to var(--color-gray-950). Variable names should follow the JSON path exactly.",
+      "files": ["tokens-json/plugin/"]
+    },
+    {
+      "id": 2,
+      "prompt": "Atualizei os tokens no Figma e exportei os JSONs novamente. Os arquivos atualizados estão em tokens-json/plugin/. Faz o sync com o CSS que já gerou antes e me mostra o diff antes de aplicar.",
+      "expected_output": "Agent reads both the existing CSS files and the new JSON tokens, computes a diff showing added/changed/removed tokens clearly, asks for user confirmation before applying, then updates only the affected CSS files. The diff format should be: ✅ Added, 🔄 Changed, ❌ Removed with token names and values.",
+      "files": ["tokens-json/plugin/", "src/styles/tokens/"]
+    },
+    {
+      "id": 3,
+      "prompt": "Quero aplicar os tokens do Design System no componente QBtn do Quasar. Temos os botões em variantes: filled (usa a cor primária), secondary (fundo transparente com borda) e tertiary (apenas texto). Como fica o CSS de override?",
+      "expected_output": "A CSS override file (or additions to quasar-overrides.css) that maps design system component tokens (--button-secondary-enabled, --button-secondary-hovered, --button-secondary-pressed) to the QBtn CSS selectors. Should use .q-btn classes, not Vue component wrappers. Should handle all three variants and :hover/:active states. Should also correctly set --q-primary to the design system primary color.",
+      "files": []
+    }
+  ]
+}
