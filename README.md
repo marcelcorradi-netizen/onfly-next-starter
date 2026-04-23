@@ -9,7 +9,7 @@ Template para criar **protótipos e validar ideias** com a cara da Onfly — rá
 ## Criar um projeto
 
 ```bash
-npx create-next-app@latest meu-projeto --example https://github.com/onfly/onfly-next-starter
+npx create-next-app@latest meu-projeto --example https://github.com/marcelcorradi-netizen/onfly-next-starter
 cd meu-projeto
 npm run dev
 ```
