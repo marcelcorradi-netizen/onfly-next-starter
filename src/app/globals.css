@@ -3,7 +3,6 @@
 
 /* ── 2. Tailwind & shadcn base ── */
 @import "tailwindcss";
-@import "tw-animate-css";
 
 /* ── Light mode only — dark: variants never fire ── */
 @variant dark (&:is(.dark *));
