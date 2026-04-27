@@ -2,7 +2,14 @@
 
 import React, { useState } from "react"
 import { cn } from "@/lib/utils"
-import { ChevronRight, Terminal } from "lucide-react"
+import { BriefcaseBusiness, ChevronRight, CreditCard, Flag, Home, Terminal } from "lucide-react"
+import { BarChart, Bar, XAxis, CartesianGrid } from "recharts"
+import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent, type ChartConfig } from "@/components/ui/chart"
+import {
+  Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel,
+  SidebarHeader, SidebarInset, SidebarMenu, SidebarMenuButton, SidebarMenuItem,
+  SidebarProvider,
+} from "@/components/ui/sidebar"
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
@@ -39,6 +46,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Toggle, } from "@/components/ui/toggle"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
+import { OnflyHeader } from "@/components/onfly-header"
 
 // ── Sidebar navigation config ────────────────────────────────────────────────
 const GROUPS: { label: string; items: { id: string; label: string }[] }[] = [
@@ -106,6 +114,14 @@ const GROUPS: { label: string; items: { id: string; label: string }[] }[] = [
     items: [
       { id: "command", label: "Command" },
       { id: "scroll-area", label: "Scroll Area" },
+      { id: "chart", label: "Chart" },
+      { id: "sidebar", label: "Sidebar" },
+    ],
+  },
+  {
+    label: "Padrões",
+    items: [
+      { id: "onfly-header", label: "Onfly Header" },
     ],
   },
 ]
@@ -975,6 +991,105 @@ function ScrollAreaStory() {
   )
 }
 
+function ChartStory() {
+  const data = [
+    { mes: "Jan", voos: 186, hoteis: 80 },
+    { mes: "Fev", voos: 305, hoteis: 200 },
+    { mes: "Mar", voos: 237, hoteis: 120 },
+    { mes: "Abr", voos: 173, hoteis: 190 },
+    { mes: "Mai", voos: 209, hoteis: 130 },
+    { mes: "Jun", voos: 294, hoteis: 160 },
+  ]
+  const chartConfig: ChartConfig = {
+    voos:   { label: "Voos",   color: "var(--background-brand-solid)" },
+    hoteis: { label: "Hotéis", color: "var(--background-brand-subtle-2-hovered)" },
+  }
+  return (
+    <div className="space-y-6 max-w-xl">
+      <Var label="Bar Chart">
+        <ChartContainer config={chartConfig} className="h-64 w-full">
+          <BarChart data={data}>
+            <CartesianGrid vertical={false} />
+            <XAxis dataKey="mes" tickLine={false} axisLine={false} />
+            <ChartTooltip content={<ChartTooltipContent />} />
+            <ChartLegend content={<ChartLegendContent />} />
+            <Bar dataKey="voos"   fill="var(--color-voos)"   radius={4} />
+            <Bar dataKey="hoteis" fill="var(--color-hoteis)" radius={4} />
+          </BarChart>
+        </ChartContainer>
+      </Var>
+    </div>
+  )
+}
+
+function SidebarStory() {
+  const navItems = [
+    { label: "Início",     icon: Home },
+    { label: "Viagens",    icon: BriefcaseBusiness },
+    { label: "Despesas",   icon: CreditCard },
+    { label: "Aprovações", icon: Flag },
+  ]
+  return (
+    <div className="space-y-6">
+      <Var label="Nav lateral">
+        <div
+          className="flex h-72 w-full overflow-hidden rounded-lg border"
+          style={{ borderColor: "var(--border-secondary)" }}
+        >
+          <SidebarProvider style={{ minHeight: 0 }}>
+            <Sidebar collapsible="none">
+              <SidebarHeader>
+                <div className="px-2 py-1">
+                  <span className="text-sm font-semibold" style={{ color: "var(--content-primary)" }}>Onfly</span>
+                </div>
+              </SidebarHeader>
+              <SidebarContent>
+                <SidebarGroup>
+                  <SidebarGroupLabel>Menu</SidebarGroupLabel>
+                  <SidebarGroupContent>
+                    <SidebarMenu>
+                      {navItems.map((item, i) => (
+                        <SidebarMenuItem key={item.label}>
+                          <SidebarMenuButton isActive={i === 0}>
+                            <item.icon />
+                            <span>{item.label}</span>
+                          </SidebarMenuButton>
+                        </SidebarMenuItem>
+                      ))}
+                    </SidebarMenu>
+                  </SidebarGroupContent>
+                </SidebarGroup>
+              </SidebarContent>
+            </Sidebar>
+            <SidebarInset>
+              <div className="p-4">
+                <p className="text-sm" style={{ color: "var(--content-tertiary)" }}>Área de conteúdo principal</p>
+              </div>
+            </SidebarInset>
+          </SidebarProvider>
+        </div>
+      </Var>
+    </div>
+  )
+}
+
+function OnflyHeaderStory() {
+  const [active, setActive] = useState<"inicio" | "viagens" | "despesas" | "aprovacoes" | "gestao" | "configuracoes">("inicio")
+  return (
+    <div className="-mx-8 -mt-8 border-b" style={{ borderColor: "var(--border-secondary)" }}>
+      <OnflyHeader
+        activeItem={active}
+        userName="Marcel Corradi"
+        userInitials="MC"
+        onNavigate={(key) => {
+          const valid = ["inicio", "viagens", "despesas", "aprovacoes", "gestao", "configuracoes"]
+          if (valid.includes(key as string)) setActive(key as typeof active)
+        }}
+      />
+    </div>
+  )
+}
+
 // ── Story registry ────────────────────────────────────────────────────────────
 const STORIES: Record<string, { label: string; component: React.ComponentType }> = {
   colors:         { label: "Cores",         component: ColorsStory },
@@ -1013,6 +1128,9 @@ const STORIES: Record<string, { label: string; component: React.ComponentType }>
   "hover-card":   { label: "Hover Card",    component: HoverCardStory },
   command:        { label: "Command",       component: CommandStory },
   "scroll-area":  { label: "Scroll Area",   component: ScrollAreaStory },
+  chart:          { label: "Chart",         component: ChartStory },
+  sidebar:        { label: "Sidebar",       component: SidebarStory },
+  "onfly-header": { label: "Onfly Header",  component: OnflyHeaderStory },
 }
 
 // ── Page ──────────────────────────────────────────────────────────────────────

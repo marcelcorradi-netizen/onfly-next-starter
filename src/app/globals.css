@@ -4,6 +4,8 @@
 /* ── 2. Tailwind & shadcn base ── */
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 /* ── Light mode only — dark: variants never fire ── */
 @variant dark (&:is(.dark *));
 

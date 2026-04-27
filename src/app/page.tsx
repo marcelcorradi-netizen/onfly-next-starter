@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -16,15 +17,16 @@ export default function Home() {
           Template base com Next.js 15, React 19, shadcn/ui e os tokens do Onfly Design System já configurados.
         </p>
         <div className="flex gap-3">
-          <Button>Começar</Button>
-          <Button variant="outline">Ver componentes</Button>
+          <Button asChild variant="outline">
+            <Link href="/showcase">Ver componentes</Link>
+          </Button>
         </div>
       </div>
 
       <div className="grid w-full max-w-3xl grid-cols-1 gap-4 md:grid-cols-3">
         <Card>
           <CardHeader>
-            <CardTitle className="text-heading-h5">70 componentes</CardTitle>
+            <CardTitle className="text-heading-h5">46 componentes</CardTitle>
             <CardDescription>shadcn/ui instalados e tematizados</CardDescription>
           </CardHeader>
           <CardContent>
